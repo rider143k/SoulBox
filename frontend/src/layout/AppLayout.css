@@ -1,0 +1,221 @@
+/* AppLayout.css */
+.app-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a12;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure full width and proper box sizing */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a12;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  color: #e6e6ff;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Responsive design utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Mobile First Responsive Breakpoints */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container-fluid {
+    padding: 0 12px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .container-fluid {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+  
+  .container-fluid {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    padding: 0 32px;
+  }
+  
+  .container-fluid {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .container {
+    padding: 0 40px;
+  }
+  
+  .container-fluid {
+    padding: 0 32px;
+  }
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.5);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: #ffd700;
+}
+
+::-moz-selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: #ffd700;
+}
+
+/* Focus outline for accessibility */
+*:focus {
+  outline: 2px solid rgba(255, 215, 0, 0.5);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+  .app-layout {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .app-main {
+    background: white !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app-layout {
+    background: #000000;
+    border: 1px solid #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark mode support (already dark by default) */
+@media (prefers-color-scheme: dark) {
+  .app-layout {
+    background: #0a0a12;
+  }
+}
+
+/* Light mode override */
+@media (prefers-color-scheme: light) {
+  .app-layout {
+    background: #0a0a12; /* Keep dark theme */
+  }
+}
+
+/* Ultra-wide screen support */
+@media (min-width: 1921px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+/* Foldable device support */
+@media (max-width: 280px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+/* Landscape mode optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  .app-layout {
+    min-height: auto;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .app-layout {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
