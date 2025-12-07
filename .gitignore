@@ -1,0 +1,19 @@
+# Node modules
+backend/node_modules/
+frontend/node_modules/
+
+# Environment files
+backend/.env
+frontend/.env
+
+# Uploads
+backend/uploads/
+
+# Logs
+*.log
+npm-debug.log
+yarn-error.log
+
+# Build files
+frontend/build
+node_modules
