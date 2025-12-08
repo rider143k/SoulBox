@@ -113,4 +113,14 @@ app.get("/health", (req, res) => {
   });
 });
 
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://soul-box.vercel.app"
+  ],
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
+
+
 module.exports = app;
