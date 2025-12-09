@@ -11,7 +11,14 @@ const db = require("./db");
 const app = express();
 
 // Middleware
-
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://soul-box.vercel.app"
+  ],
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
@@ -113,14 +120,6 @@ app.get("/health", (req, res) => {
   });
 });
 
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://soul-box.vercel.app"
-  ],
-  methods: "GET,POST,PUT,DELETE",
-  credentials: true
-}));
 
 
 module.exports = app;
